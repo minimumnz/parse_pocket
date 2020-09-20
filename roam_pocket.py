@@ -124,7 +124,7 @@ def fetch_url_list():
     """
     url_list = []
     soup = BeautifulSoup(open("pocket_data/ril_export.html"), "html.parser")
-    for link in soup.findAll("a")[10:2500]:
+    for link in soup.findAll("a"):
         url = link.get("href")
         url_list.append(url)
     return url_list
