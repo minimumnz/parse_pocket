@@ -27,6 +27,7 @@ If you're still not discouraged:
 3. spaCy (https://github.com/explosion/spaCy)*
 4. beautifulsoup4
 5. newspaper3k
+6. requests
 
 **Installation:**
 

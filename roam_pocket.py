@@ -25,8 +25,8 @@ def roam_format(article_dict):
         print(e)
         date = ''
     authors = " ".join([f"[[{k}]]" for k in article_dict['authors']])
-    entities = " ".join([f"[[{k}]]" for k in article_dict['entities']])
-    keywords = " ".join([f"[[{k}]]" for k in article_dict['long_keywords'][:10]])
+    keywords = " ".join([f"[[{k}]]" for k in article_dict['keywords']])
+    entities = " ".join([f"[[{k}]]" for k in article_dict['long_keywords'][:10]])
     summary = article_dict['summary'].replace('"', '')
     if authors:
         authors_string = f'{{ "string": "**Author**: {authors}"}},\n'
@@ -117,24 +117,6 @@ def fetch_links(url_list):
     keywords = [k for k in keywords if k]
     keywords = sum(keywords, [])
 
-
-
-def fetch_shortened_links(link):
-    link_id = link.split("/")[-1]
-    if conn.get(link_id):
-        print(f"Already fetched this link id. {link}")
-        return
-    print(link_id)
-    time.sleep(2)
-    try:
-        s = requests.get(link)
-        if s.url:
-            print(s.url)
-            conn.set(link_id, s.url)
-        else:
-            print("no url")
-    except Exception as e:
-        print(f"{e}")
 
 def fetch_url_list():
     """
