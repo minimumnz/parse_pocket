@@ -12,9 +12,11 @@ The generated json files will be saved in data/
 
 
 *Warning:*
-1. For many pages it will fail. I have a separate script to fetch Twitter links but this requires API access.
-2. Many times the summaries, and entities it generates are suboptimal :)
-3. The generated JSON will somtimes be incorrect and not upload to Roam.
+1. It is slow.
+2. For many pages it will fail. I have a separate script to fetch Twitter links but this requires API access.
+3. Many times the summaries, and entities it generates are suboptimal :)
+4. The generated JSON will somtimes be incorrect and not upload to Roam.
+
 
 If you're still not discouraged:
 
